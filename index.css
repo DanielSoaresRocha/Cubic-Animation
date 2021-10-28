@@ -5,6 +5,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   height: 100vh;
   width: 100vw;
   perspective: 400px;
@@ -77,4 +78,35 @@ body {
 .base {
   background: linear-gradient(to bottom, Navy, #d3d30b, gold);
   transform: translate3d(0, 0, 100px);
+}
+
+a {
+  color: white;
+  z-index: 1;
+  font-weight: bold;
+  position: absolute;
+  top: 10vh;
+}
+
+.description {
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  top: 10vh;
+  text-decoration: none;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  font-family: monospace;
+}
+
+a.flip {
+  margin-top: 1.2rem;
+  -moz-transform: scaleY(-1);
+  -o-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+  background: -webkit-linear-gradient(#fff, #777);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
