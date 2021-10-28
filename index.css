@@ -21,6 +21,18 @@ body {
   height: 100px;
   position: absolute;
   transform-style: preserve-3d;
+  animation: rotate-color 3s infinite linear;
+  box-shadow: 5px 5px 43px 5px #f704f9;
+  border-radius: 50%;
+}
+
+@keyframes rotate-color {
+  0% {
+    filter: hue-rotate(0);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }
 
 .cubic {
@@ -29,40 +41,40 @@ body {
 
 @keyframes rotate {
   0% {
-    transform: rotateX(71deg) rotate(0);
+    transform: rotateX(0) rotateY(0);
   }
   100% {
-    transform: rotateX(71deg) rotate(360deg);
+    transform: rotateX(360deg) rotateY(360deg);
   }
 }
 
 .left {
-  background: red;
+  background: linear-gradient(to right, blue, red, white);
   transform: rotateX(90deg) translateY(50px);
   top: 51px;
 }
 
 .right {
-  background: blue;
+  background: linear-gradient(to right, pink, brown, black);
   transform: rotateX(90deg) translateY(50px);
   bottom: 51px;
 }
 
 .top {
-  background: green;
+  background: linear-gradient(to top, green, yellow, purple);
   transform: rotateY(90deg) translate(-51px, 72px);
   right: 50px;
   top: -72px;
 }
 
 .bottom {
-  background: brown;
+  background: linear-gradient(to left, brown, gray, red);
   transform: rotateY(90deg) translate(-51px, 72px);
   right: -50px;
   top: -72px;
 }
 
 .base {
-  background: pink;
+  background: linear-gradient(to bottom, Navy, #d3d30b, gold);
   transform: translate3d(0, 0, 100px);
 }
